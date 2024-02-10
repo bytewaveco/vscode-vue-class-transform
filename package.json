@@ -1,6 +1,7 @@
 {
   "name": "vue-class-transform",
-  "displayName": "vue-class-transform",
+  "displayName": "Vue Class Transform",
+  "publisher": "Bytewave",
   "description": "Transform Vue.js template classes from strings to object bindings and back.",
   "license": "MIT",
   "repository": {
