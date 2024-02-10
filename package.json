@@ -1,0 +1,52 @@
+{
+  "name": "vue-class-transform",
+  "displayName": "vue-class-transform",
+  "description": "Transform Vue.js template classes from strings to object bindings and back.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bytewaveco/vscode-vue-class-transform.git"
+  },
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vue-class-transform.transformClass",
+        "title": "Transform Class"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "resourceLangId == vue",
+          "group": "0_Bytewave",
+          "command": "vue-class-transform.transformClass",
+          "title": "Transform Class"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build": "vsce package",
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.86.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.9"
+  }
+}
